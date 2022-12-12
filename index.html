@@ -12,14 +12,13 @@
       .btn-styling {
         height: 50px;
         width: 50px;
-        top: 175px;
+        margin-bottom: auto;
         position: absolute;
       }
       .slider {
         display: flex;
         width: 100%;
         height: 300px;
-        margin: auto;
         background-color: rgb(240, 240, 240);
       }
 
@@ -136,18 +135,31 @@
         <h5>JQuery, Bootstrap</h5>
       </div>
       <div id="slider" class="slider rounded">
-        <div class="d-sm-none d-lg-block">
-          <button id="left" class="btn btn-light rounded-circle btn-styling" style="left:1%">
+        <div class="d-sm-none d-lg-flex" style="margin:auto">
+          <button
+            id="left"
+            class="btn btn-light rounded-circle btn-styling"
+            style="left: 1%"
+          >
             <i class="fa fa-angle-left" aria-hidden="true"></i>
           </button>
-          <button id="right" class="btn btn-light rounded-circle btn-styling" style="right: 1%;">
+          <button
+            id="right"
+            class="btn btn-light rounded-circle btn-styling"
+            style="right: 1%"
+          >
             <i class="fa fa-angle-right" aria-hidden="true"></i>
           </button>
         </div>
         <div class="item active-left">
-          <div style="background-image: url('https://cdn-icons-png.flaticon.com/512/25/25231.png');  background-size: 100%;; width:100%; height: 300px;">
-
-          </div>
+          <div
+            style="
+              background-image: url('https://cdn-icons-png.flaticon.com/512/25/25231.png');
+              background-size: 100%;
+              width: 100%;
+              height: 300px;
+            "
+          ></div>
         </div>
         <div class="item">
           <div class="d-flex justify-content-around mx-auto">
