@@ -9,25 +9,22 @@
     />
     <link rel="stylesheet" href="fa/css/font-awesome.min.css" />
     <style>
-      img {
-        width: 20%;
-      }
       .btn-styling {
         height: 50px;
         width: 50px;
-        margin-top: auto;
-        margin-bottom: auto;
+        top: 175px;
+        position: absolute;
       }
       .slider {
         display: flex;
         width: 100%;
-        height: 80%;
+        height: 300px;
         margin: auto;
-        padding: 20px;
         background-color: rgb(240, 240, 240);
       }
 
       .item {
+        width: 100%;
         margin: auto;
         display: none;
       }
@@ -39,6 +36,7 @@
 
       .active-right {
         display: flex;
+        object-fit: cover;
         animation: 0.5s anim-r;
       }
 
@@ -49,6 +47,7 @@
 
       .active-left {
         display: flex;
+        object-fit: cover;
         animation: 0.5s anim-l;
       }
 
@@ -102,34 +101,28 @@
 
       @keyframes disable-r {
         100% {
-          transform: translateX(-100px);
+          transform: scale(0, 1);
           opacity: 0;
         }
       }
 
       @keyframes disable-l {
         100% {
-          transform: translateX(100px);
+          transform: scale(0, 1);
           opacity: 0;
         }
       }
 
       @keyframes anim-r {
         0% {
-          transform: translateX(100px);
+          transform: scale(0, 1);
           opacity: 0;
         }
       }
 
-      @keyframes anim-r {
-        0% {
-          transform: translateX(100px);
-          opacity: 0;
-        }
-      }
       @keyframes anim-l {
         0% {
-          transform: translateX(-100px);
+          transform: scale(0, 1);
           opacity: 0;
         }
       }
@@ -143,23 +136,21 @@
         <h5>JQuery, Bootstrap</h5>
       </div>
       <div id="slider" class="slider rounded">
-        <div class="d-sm-none d-lg-flex">
-          <button id="left" class="btn btn-light rounded-circle btn-styling">
+        <div class="d-sm-none d-lg-block">
+          <button id="left" class="btn btn-light rounded-circle btn-styling" style="left:1%">
             <i class="fa fa-angle-left" aria-hidden="true"></i>
+          </button>
+          <button id="right" class="btn btn-light rounded-circle btn-styling" style="right: 1%;">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
           </button>
         </div>
         <div class="item active-left">
-          <div class="d-flex justify-content-around align-items-center">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" />
-            <h1>
-              <a  href="https://github.com/Asquardian" style="color: black"
-                >See my GitHub</a
-              >
-            </h1>
+          <div style="background-image: url('https://cdn-icons-png.flaticon.com/512/25/25231.png');  background-size: 100%;; width:100%; height: 300px;">
+
           </div>
         </div>
         <div class="item">
-          <div class="d-flex justify-content-between">
+          <div class="d-flex justify-content-around mx-auto">
             <h1 class="w-100">YouTube video Test</h1>
             <iframe
               class="ml-5"
@@ -174,12 +165,7 @@
           </div>
         </div>
 
-        <div class="item"><h1>Some Text</h1></div>
-        <div class="d-sm-none d-lg-flex">
-          <button id="right" class="btn btn-light rounded-circle btn-styling">
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-          </button>
-        </div>
+        <div class="item"><h1 class="mx-auto">Some Text</h1></div>
       </div>
       <div class="d-flex justify-content-center mt-2">
         <div class="pointer p-active"></div>
